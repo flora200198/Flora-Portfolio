@@ -1,0 +1,106 @@
+/* Section */
+.projects-section {
+  background: linear-gradient(180deg, #f8f9fa, #ffffff);
+  padding: 100px 0;
+}
+
+/* Header */
+.projects-header {
+  margin-bottom: 70px;
+}
+
+.projects-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.projects-subtitle {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Card */
+.project-card {
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+/* Card glow */
+.project-card:hover {
+  box-shadow: 0 35px 70px rgba(13, 110, 253, 0.25);
+}
+
+/* Card Header */
+.project-card-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #0f2723, #204341, #2c6464);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card-header h5 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.project-card-header span {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+/* Body */
+.project-card-body {
+  padding: 20px;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Tech Tags */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tech-tag {
+  background: rgba(13, 110, 253, 0.1);
+  color: #04ad6c;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+/* Footer */
+.project-card-footer {
+  padding: 0 20px 24px;
+  
+}
+
+/* Button */
+.project-card-footer .btn {
+  border-radius: 30px;
+  font-size: 0.85rem;
+  background-color: #2c6464;
+  border-color: #2c6464;
+}
+
+.project-card-footer .btn:hover {
+  background-color: #2c6464;
+    border-color: #2c6464;
+  box-shadow: 0 0 15px rgba(4, 173, 108, 0.6);
+}

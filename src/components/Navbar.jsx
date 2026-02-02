@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -19,9 +18,13 @@ const Navbar = () => {
       ${scrolled ? 'navbar-scrolled' : 'navbar-top'}`}
     >
       <div className="container">
- <Link className="navbar-brand brand-animate" to="/">
+        <a className="navbar-brand brand-animate" href="/">
+          Flora A
+        </a>
+
+{/* <Link className="navbar-brand brand-animate" to="/">
   Flora A
-</Link>
+</Link> */}
 
         <button
           className="navbar-toggler"

@@ -63,7 +63,7 @@
 }
 
 .social-link {
-  color: #fff;
+  color: #30586b;
   font-size: 1.6rem;
   width: 48px;
   height: 48px;
@@ -71,14 +71,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.986);
   transition: all 0.35s ease;
 }
 
 .social-link:hover {
   background: #0d6efd;
   color: #fff;
-  box-shadow: 0 0 20px rgba(13, 110, 253, 0.8);
+  box-shadow: 0 0 20px rgba(200, 222, 255, 0.8);
   transform: translateY(-4px) scale(1.05);
 }
 

@@ -3,13 +3,12 @@ import { motion } from "framer-motion";
 import resumeData from "../data/resumeData";
 import "./Projects.css";
 
+/* Animation variants */
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
+    transition: { staggerChildren: 0.2 },
   },
 };
 
@@ -24,23 +23,20 @@ const cardVariants = {
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="section-padding"
-      style={{ backgroundColor: "#f8f9fa" }}
-    >
+    <section id="projects" className="projects-section">
       <div className="container">
-        {/* Header */}
+
+        {/* Section Header */}
         <motion.div
-          className="text-center mb-5"
+          className="projects-header text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="text-muted">
-            Some of the applications I’ve built
+          <h2 className="projects-title">Featured Projects</h2>
+          <p className="projects-subtitle">
+            Real-world applications showcasing my skills
           </p>
         </motion.div>
 
@@ -54,53 +50,54 @@ const Projects = () => {
         >
           {resumeData.projects.map((project, index) => (
             <motion.div
-              className="col-md-4"
+              className="col-lg-4 col-md-6"
               key={index}
               variants={cardVariants}
             >
               <motion.div
-                className="card project-card h-100"
-                whileHover={{ y: -8 }}
+                className="project-card"
+                whileHover={{ y: -12, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 120 }}
               >
-                {/* Header */}
-                <div className="project-header d-flex justify-content-between align-items-center">
-                  <h5 className="mb-0 fw-bold text-primary">
-                    {project.name}
-                  </h5>
-                  <small className="text-muted">{project.date}</small>
+                {/* Card Top */}
+                <div className="project-card-header">
+                  <h5>{project.name}</h5>
+                  <span>{project.date}</span>
                 </div>
 
-                {/* Body */}
-                <div className="card-body">
-                  <div className="mb-3 d-flex flex-wrap gap-2">
-                    {project.tech.map((t, i) => (
+                {/* Card Content */}
+                <div className="project-card-body">
+                  <div className="tech-stack">
+                    {project.tech.map((tech, i) => (
                       <span key={i} className="tech-tag">
-                        {t}
+                        {tech}
                       </span>
                     ))}
                   </div>
 
-                  <p className="card-text text-muted small">
+                  <p className="project-description">
                     {project.description}
                   </p>
                 </div>
 
-                {/* Footer */}
-                <div className="card-footer bg-white border-top-0 pb-3">
+                {/* Card Footer */}
+                <div className="project-card-footer">
                   <a
-                    href={project.link || "#"}
-                    className="btn btn-outline-primary btn-sm w-100 stretched-link"
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="btn btn-primary w-100"
+                    aria-label={`View ${project.name} source code on GitHub`}
                   >
-                    View Details
+                    <i className="fab fa-github me-2"></i>
+                    View on GitHub
                   </a>
                 </div>
               </motion.div>
             </motion.div>
           ))}
         </motion.div>
+
       </div>
     </section>
   );
