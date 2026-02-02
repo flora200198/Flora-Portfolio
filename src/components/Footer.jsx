@@ -25,10 +25,10 @@ const Footer = () => {
         </div>
 
         <div className="footer-socials">
-          <a href="#" className="social-link" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/flora398/" className="social-link" aria-label="LinkedIn">
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="#" className="social-link" aria-label="GitHub">
+          <a href="https://github.com/flora200198" className="social-link" aria-label="GitHub">
             <i className="fab fa-github"></i>
           </a>
         </div>
