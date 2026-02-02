@@ -14,9 +14,9 @@ const resumeData = {
   ],
   experience: [
     {
-      role: "Full Stack Developer",
+      role: "Full Stack Developer | Head of Operations",
       company: "RL Technologies",
-      period: "Mar 2023 - Oct 2024",
+      period: " April 2025 - Present ",
       description: [
         "Full Stack Developer managing end-to-end website operations, including development, deployment, optimization, and maintenance.",
         "Experienced in SEO, digital marketing activities, and website analytics, with a strong focus on performance, user experience, and growth.",
@@ -25,9 +25,9 @@ const resumeData = {
       ]
     },
     {
-      role: "Software Developer",
+      role: "Operation Engineer",
       company: "Brakes India Pvt, Ltd",
-      period: "Sep 2019 - Feb 2023",
+      period: "Mar 2023 - Oct 2024 ",
       description: [
         "Involved in product testing and yield management.",
         "Collaborating with cross-functional teams to improve production efficiency by 15% through the implementation of lean manufacturing principles and process optimization."
@@ -36,7 +36,7 @@ const resumeData = {
     {
       role: "Graduate Engineering Trainee",
       company: "Foxconn Honn Hai",
-      period: "April 2025 - Present", // As provided in source
+      period: "Sep 2019 - Feb 2023", // As provided in source
       description: [
         "Involved in IT skill training operations and cross-functional coordination."
       ]

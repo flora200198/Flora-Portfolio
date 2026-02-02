@@ -21,7 +21,6 @@ const Footer = () => {
         <div className="mb-4">
           <a href="#" className="social-link"><i className="fab fa-linkedin"></i></a>
           <a href="#" className="social-link"><i className="fab fa-github"></i></a>
-          <a href="#" className="social-link"><i className="fab fa-twitter"></i></a>
         </div>
 
         <hr className="border-secondary" />
