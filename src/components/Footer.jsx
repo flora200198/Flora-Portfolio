@@ -1,32 +1,44 @@
 import React from 'react';
 import resumeData from '../data/resumeData';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer id="contact">
-      <div className="container text-center">
-        <h2 className="text-white mb-4">Get In Touch</h2>
-        <div className="mb-5">
-          <div className="contact-item text-white">
-            <i className="fas fa-envelope"></i> {resumeData.personal.email}
+    <footer id="contact" className="footer">
+      <div className="container text-center footer-content">
+
+        <h2 className="footer-title">Get In Touch</h2>
+
+        <div className="footer-contacts">
+          <div className="contact-item">
+            <i className="fas fa-envelope"></i>
+            <span>{resumeData.personal.email}</span>
           </div>
-          <div className="contact-item text-white">
-            <i className="fas fa-phone"></i> {resumeData.personal.phone}
+          <div className="contact-item">
+            <i className="fas fa-phone"></i>
+            <span>{resumeData.personal.phone}</span>
           </div>
-          <div className="contact-item text-white">
-            <i className="fas fa-map-marker-alt"></i> {resumeData.personal.location}
+          <div className="contact-item">
+            <i className="fas fa-map-marker-alt"></i>
+            <span>{resumeData.personal.location}</span>
           </div>
-        </div>
-        
-        <div className="mb-4">
-          <a href="#" className="social-link"><i className="fab fa-linkedin"></i></a>
-          <a href="#" className="social-link"><i className="fab fa-github"></i></a>
         </div>
 
-        <hr className="border-secondary" />
-        <p className="small mb-0">
+        <div className="footer-socials">
+          <a href="#" className="social-link" aria-label="LinkedIn">
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a href="#" className="social-link" aria-label="GitHub">
+            <i className="fab fa-github"></i>
+          </a>
+        </div>
+
+        <hr className="footer-divider" />
+
+        <p className="footer-copy">
           &copy; {new Date().getFullYear()} {resumeData.personal.name}. All rights reserved.
         </p>
+
       </div>
     </footer>
   );

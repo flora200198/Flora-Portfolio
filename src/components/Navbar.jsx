@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -12,19 +13,31 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? 'bg-dark shadow-sm' : 'bg-transparent'}`}>
+    <nav
+      className={`navbar navbar-expand-lg fixed-top animated-navbar 
+      ${scrolled ? 'navbar-scrolled' : 'navbar-top'}`}
+    >
       <div className="container">
-        <a className="navbar-brand fw-bold" href="#">
+        <a className="navbar-brand brand-animate" href="#">
           Flora A
         </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
             {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
-              <li className="nav-item" key={item}>
-                <a className="nav-link" href={`#${item.toLowerCase()}`}>{item}</a>
+              <li className="nav-item nav-item-animate" key={item}>
+                <a className="nav-link nav-link-underline" href={`#${item.toLowerCase()}`}>
+                  {item}
+                </a>
               </li>
             ))}
           </ul>

@@ -1,0 +1,89 @@
+/* Navbar base animation */
+.animated-navbar {
+  transition: all 0.4s ease;
+  padding: 18px 0;
+  backdrop-filter: blur(10px);
+}
+
+/* Top state */
+.navbar-top {
+  background: transparent;
+}
+
+/* Scrolled state */
+.navbar-scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.5s ease;
+}
+
+/* Slide down effect */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Brand animation */
+.brand-animate {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: #fff;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.brand-animate:hover {
+  color: #0d6efd;
+  text-shadow: 0 0 12px rgba(13, 110, 253, 0.8);
+}
+
+/* Nav item animation */
+.nav-item-animate {
+  margin-left: 20px;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Link underline animation */
+.nav-link-underline {
+  color: #fff !important;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-link-underline::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.nav-link-underline:hover {
+  color: #0d6efd !important;
+}
+
+.nav-link-underline:hover::after {
+  width: 100%;
+}
